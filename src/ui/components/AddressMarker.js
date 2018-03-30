@@ -6,7 +6,6 @@ import {
     DirectionsRenderer,
     Marker
 } from "react-google-maps";
-import * as Value from './../constants/variable'
 
 const { compose } = require("recompose");
 const { MarkerWithLabel } = require("react-google-maps/lib/components/addons/MarkerWithLabel");
@@ -30,7 +29,7 @@ export default class AddressMarker extends Component {
     render(){
         return (
             <MapWithAMarkerWithLabel
-                googleMapURL={Value.googleMapUrl}
+                googleMapURL={this.props.googleMapURL}
                 loadingElement={<div style={{ height: `100%` }} />}
                 containerElement={<div style={{ height: `400px` }} />}
                 mapElement={<div style={{ height: `100%` }} />}

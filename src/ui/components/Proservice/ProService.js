@@ -8,6 +8,7 @@ import DetailAboutUs from '../Proservice/DetailAboutUs'
 import Service from '../Proservice/Service'
 import Client from '../Proservice/Client'
 import Contact from '../Proservice/Contact'
+import Footer from '../Home/Footer'
 import dataProservice from './../../../api/data-proservice.json';
 
 export default class Proservice extends Component {
@@ -55,6 +56,7 @@ export default class Proservice extends Component {
                         email={this.state.contact.Detail ? this.state.contact.Detail.Email : ""}
                         followUs={this.state.contact.Detail ? this.state.contact.Detail.FollowUs : []}
                         />
+                <Footer />
             </div>
         )
     }

@@ -67,5 +67,12 @@ module.exports = {
     hot: true,
     inline: false,
     historyApiFallback: true
+  },
+  node: {
+    dns: 'empty',
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty',
+    
   }
 };

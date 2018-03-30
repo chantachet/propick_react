@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import './../../css/App.css'
-import LeftImage from './../../images/0330.jpg'
-// import RightImage from './../../images/0361.jpg'
-import RightImage from './../../images/0361.jpg'
+import { LeftImage, RightImage } from '../../constants/configImagePath'
 import HomeMenu from './HomeMenu'
 import Footer from './Footer'
 
@@ -20,7 +18,7 @@ export default class Home extends Component {
                     </div>
                 </div>
                 <div className="row col-sm-12 text-center" style={{backgroundColor: 'lightgray'}}>
-                    ©2018 All rights reserved - Proservice Co., Ltd.
+                    ©2018 All rights reserved - Pro Services Co., Ltd.
                 </div>
                 {/* <Footer/> */}
             </div>

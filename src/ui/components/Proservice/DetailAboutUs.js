@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ImageDetail from './../../images/0330.jpg'
+import { ImageDetailAboutUs } from '../../constants/configImagePath'
 
 export default class DetailAboutUs extends Component {
     render(){
@@ -25,11 +25,8 @@ export default class DetailAboutUs extends Component {
                         </div>
                     </div>
                     <div className="col-sm-6" style={{ paddingLeft: '0px', paddingRight: '0px' }}>
-                        <div className="item quality-info" style={{ backgroundImage: "url(" + ImageDetail + ")" }}>
+                        <div className="item quality-info" style={{ backgroundImage: "url(" + ImageDetailAboutUs + ")" }}>
                         </div>
-                        {/* <div className="detail-info" >
-                            <img src={VivaOfficeImage} alt="img" />
-                        </div> */}
                     </div>
                 </div>
             </div>

@@ -1,10 +1,5 @@
 import React, { Component } from 'react'
-import PropickLogo from './../../images/logo/logoApp2.png'
-import AppStore from './../../images/logo/appstore.png'
-import PlayStore from './../../images/logo/googleplay.png'
-import Mobile from './../../images/screen/mobile_screen.png'
-// import BGInfo from './../../images/9956.jpg'
-import BGInfo from './../../images/0382.jpg'
+import { PropickLogo, AppStore, PlayStore, Mobile, BGInfoPropick } from '../../constants/configImagePath'
 
 export default class Info extends Component {
     render() {
@@ -14,14 +9,10 @@ export default class Info extends Component {
             titleDetail = this.props.detail[1]
         }
         return (
-            <div id="propick-info" className="info-bg" style={{ backgroundImage: "url(" + BGInfo + ")" }}>
+            <div id="propick-info" className="info-bg" style={{ backgroundImage: "url(" + BGInfoPropick + ")" }}>
                 <div className="container section-height" >
-                    {/* <div className="propick-section-header">
-                        <div className="section-title text-center wow fadeInDown"><h4>Info</h4></div>
-                    </div> */}
                     <div className="row">
-                        {/* <div className="col-sm-1 col-md-1"></div> */}
-                        <div className="col-xs-12 col-sm-5 col-md-5 left-infp-panel">
+                        <div className="col-xs-12 col-sm-6 col-md-6">
                             <div className="row">
                                 <div className="propick-logo">
                                     <img src={PropickLogo} alt="logo" />
@@ -46,9 +37,6 @@ export default class Info extends Component {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className="col-xs-12 col-sm-6 col-md-6 right-info-panel">
-                            <img src={Mobile} alt="mobile" />
-                        </div> */}
                     </div>
                 </div>
             </div>

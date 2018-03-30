@@ -1,42 +1,89 @@
 import React, { Component } from 'react'
 import './../../css/proservice.css'
-import BGAboutUs from './../../images/0115.jpg'
+import '../../css/aboutus.css'
+import { BGAboutUs } from '../../constants/configImagePath'
 import HomeMenu from '../Home/HomeMenu'
 import Menu from '../Proservice/Menu'
+import dataProservice from '../../../api/data-proservice.json';
 
 export default class AboutUs extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            aboutUs: [],
+            introduction: [],
+            benefit: []
+        }
+    }
+
+
+    componentDidMount() {
+        var data = dataProservice
+        this.loadData(data.data.Proservice);
+    }
+
+    loadData(data) {
+        this.setState({
+            aboutUs: data.AboutUs,
+            introduction: data.AboutUs.Detail.Introduction,
+            benefit: data.AboutUs.Detail.Benefit
+        })
+    }
     render() {
+        let tagIntroduction = [], tagBenefit = [];
+        if (this.state.aboutUs.Detail) {
+            if (this.state.introduction) {
+                this.state.introduction.forEach((value, i) => {
+                    tagIntroduction.push(<p key={i}><h4>{i + 1}. {value}</h4></p>)
+
+                })
+            }
+            if (this.state.benefit) {
+                this.state.benefit.forEach((value, i) => {
+                    tagBenefit.push(<p key={i}><h4>{i + 1}. {value}</h4></p>)
+
+                })
+            }
+        }
         return (
             <div id="aboutus">
                 <HomeMenu />
                 <Menu />
-                <div className="row text-center">
-                    <div className="col-sm-6" style={{ paddingLeft: '0px', paddingRight: '0px' }}>
+                <div className="row text-center timeline aboutus-bg" style={{ backgroundImage: "url(" + BGAboutUs + ")" }}>
+                    {/* <div className="col-sm-6" style={{ paddingLeft: '0px', paddingRight: '0px' }}>
                         <div className="item quality-info" style={{ backgroundImage: "url(" + BGAboutUs + ")" }}>
                         </div>
-                        {/* <div className="detail-info" >
-                            <img src={VivaOfficeImage} alt="img" />
-                        </div> */}
-                    </div>
-                    <div className="col-sm-6">
-                        <div className="panel-one">
-                            <div className="text-center">
-                                <h4 style={{ paddingTop: 50 }}></h4>
-                                {/* {tagsDetail} */}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="row text-center">
-                    <div className="col-sm-6">
-                        <div className="panel-one">
-                            <div className="text-center">
-                                <h4 style={{ paddingTop: 50 }}></h4>
-                                {/* {tagsDetail} */}
-                            </div>
-                        </div>
+                    </div> */}
+                    {/* <div className="section-header">
+                        <div className="section-title text-center wow fadeInDown"><h2>เกี่ยวกับเรา</h2></div>
+                    </div> */}
+                    <div className="col-sm-12 timeline-padding-body ">
+                        {/* <h2>เกี่ยวกับเรา</h2> */}
+                        <ul>
+                            <li>
+                                <h3>นโยบายหลัก</h3>
+                                {tagIntroduction}
+                            </li>
+                            <li>
+                                <h3>สิ่งที่คุณจะได้รับ</h3>
+                                {tagBenefit}
+                            </li>
+                        </ul>
                     </div>
                 </div>
+                {/* <div className="timeline">
+                    <h2>เกี่ยวกับเรา</h2>
+                    <ul>
+                        <li>
+                            <h3>นโยบายหลัก</h3>
+                            {tagIntroduction}
+                        </li>
+                        <li>
+                            <h3>สิ่งที่คุณจะได้รับ</h3>
+                            {tagBenefit}
+                        </li>
+                    </ul>
+                </div> */}
             </div>
         )
     }

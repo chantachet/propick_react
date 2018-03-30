@@ -30,6 +30,41 @@
                     "Delivery"
                 ]
             },
+            "AdditionalServices": {
+                "Name": "Type Services",
+                "Detail": [
+                    {
+                        "TypeIcon": "fa fa-shopping-cart",
+                        "TypeName": "Purchase",
+                        "TypePrice": 40,
+                        "TypeDetail": ""
+                    },
+                    {
+                        "TypeIcon": "fa fa-cutlery",
+                        "TypeName": "Food Box on Car",
+                        "TypePrice": 0,
+                        "TypeDetail": ""
+                    },
+                    {
+                        "TypeIcon": "fa fa-file-text-o",
+                        "TypeName": "Billing",
+                        "TypePrice": 50,
+                        "TypeDetail": ""
+                    },
+                    {
+                        "TypeIcon": "fa fa-cube",
+                        "TypeName": "Shipping",
+                        "TypePrice": 50,
+                        "TypeDetail": ""
+                    },
+                    {
+                        "TypeIcon": "fa fa-repeat",
+                        "TypeName": "Cash on delivery",
+                        "TypePrice": 50,
+                        "TypeDetail": ""
+                    }
+                ]
+            },
             "HowTo": {
                 "Name": "How To",
                 "Detail": [

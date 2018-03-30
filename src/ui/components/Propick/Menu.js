@@ -16,11 +16,11 @@ export default class Menu extends Component {
                     <Navbar.Collapse>
                         <Nav >
                             {/* <NavItem eventKey={1} href="/proservice/#info">Info</NavItem> */}
-                            <NavItem eventKey={1} href="/propick/#howgood">How Good</NavItem>
-                            <NavItem eventKey={2} href="/propick/#howto">How To</NavItem>
+                            <NavItem eventKey={1} href="/propick/#howgood" activeClassName="active-link">How Good</NavItem>
+                            <NavItem eventKey={2} href="/propick/#howto" activeClassName="active-link">How To</NavItem>
                             {/* <NavItem eventKey={3} href="/propick/#howwork">How Work</NavItem> */}
-                            <NavItem eventKey={4} href="/propick/#service">How Services</NavItem>
-                            <NavItem eventKey={5} href="/propick/#contactus">Contact Us</NavItem>
+                            <NavItem eventKey={4} href="/propick/#service" activeClassName="active-link">How Services</NavItem>
+                            <NavItem eventKey={5} href="/propick/#contactus" activeClassName="active-link">Contact Us</NavItem>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

@@ -1,8 +1,13 @@
 #proservice .App-Bar {
+    font-weight: 600;
     padding-top: 20px;
     padding-bottom: 10px;
     background-color: gray;
     /* background-color: #009BFF; */
+  }
+
+  #proservice .App-Bar a:hover{
+      color: #009BFF;
   }
 
   #aboutus .App-Bar {
@@ -13,6 +18,20 @@
   }
 
   #career .App-Bar {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: gray;
+    /* background-color: #009BFF; */
+  }
+
+ #term-proservices .App-Bar {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: gray;
+    /* background-color: #009BFF; */
+  }
+
+ #privacy-proservices .App-Bar {
     padding-top: 20px;
     padding-bottom: 10px;
     background-color: gray;
@@ -37,6 +56,33 @@
         background-size: cover;
         width: 100%;
         height: 400px;
+    }
+
+    .career-info {
+        background-position: center no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 460px;
+    }
+
+    .career-bg {
+        width: 100%;
+        height: 500px;
+      }
+    .career-panel {
+        padding-bottom: 50px;
+        /* margin-top: 50px; */
+    }
+
+    .aboutus-detail {
+        text-align: left;
+        padding-left: 30px;
+    }
+  
+    .aboutus-title {
+        font-weight: bold;
+        padding-top: 30px;
+        padding-bottom: 10px;
     }
 }
 
@@ -84,9 +130,9 @@
     max-width:100%;
 }
 .pro-service-detail h3 {
-    color: black;
-    background-color: #ffffff !important;
-    position: absolute;
+    color: rgb(255, 255, 255);
+    background-color: #c10000 !important;
+    /* position: absolute; */
     /* bottom: 0px; */
     margin-top: 0px;
     left: 0px;
@@ -130,4 +176,34 @@
   .pro-service-item .slider-inner .btn.btn-primary{ padding:10px 46px; font-size:18px;}
   .pro-service-item .slider-inner .btn.btn-primary:hover{ background:#00BFFF;}
 
+  .career-bg {
+    background-attachment: fixed;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
+  .career-panel {
+      background-color: rgba(255, 255, 255, 0.5) !important;
+  }
+
+  .aboutus-detail {
+      text-align: left;
+  }
+
+  .aboutus-title {
+      font-weight: bold;
+      padding-top: 20px;
+      padding-bottom: 10px;
+  }
+
+  .aboutus-bg {
+    background-attachment: fixed;
+    /* z-index: 1; */
+    background-color: rgba(255, 255, 255, 0.2);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

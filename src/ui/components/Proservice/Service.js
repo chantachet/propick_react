@@ -1,24 +1,18 @@
 import React, { Component } from 'react'
 import './../../css/warehouse.css'
-// import Service1 from './../../images/0115.jpg'
-// import Service2 from './../../images/0115.jpg'
-// import Service3 from './../../images/0115.jpg'
-
-import Service1 from './../../images/004.jpg'
-import Service2 from './../../images/001.jpg'
-import Service3 from './../../images/003.jpg'
+import { ServicePurchase, ServiceBilling, ServiceRecruit } from '../../constants/configImagePath'
 
 export default class Service extends Component {
     render() {
-        var imageService = [Service1, Service2, Service3]
+        var imageService = [ServicePurchase, ServiceBilling, ServiceRecruit]
         var tagDetail = []
         if (this.props.detail) {
             this.props.detail.forEach((value, i) => {
                 tagDetail.push(
-                    <div className="col-xs-12 col-sm-4 col-md-4">
+                    <div className="col-xs-12 col-sm-4 col-md-4" key={i}>
                     <div className="wow zoomIn" data-wow-duration="400ms" data-wow-delay="0ms">
                         <div className="pro-service-item">
-                            <div class="pro-service-detail">
+                            <div className="pro-service-detail">
                                 <img src={imageService[i]} alt="image" />
                                 <h3>{value}</h3>
                             </div>

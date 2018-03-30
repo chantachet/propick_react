@@ -9,6 +9,7 @@ import HowWork from '../Propick/HowWork'
 import Service from '../Propick/Service'
 import Contact from '../Propick/Contact'
 import Delivery from '../Propick/Delivery'
+import Footer from '../Home/Footer'
 import fetch from 'isomorphic-fetch'
 import dataPropick from './../../../api/data-propick.json'
 
@@ -61,6 +62,7 @@ export default class Propick extends Component {
                         email={this.state.contact.Detail ? this.state.contact.Detail.Email : ""}
                         followUs={this.state.contact.Detail ? this.state.contact.Detail.FollowUs : []}
                         />
+                <Footer />
             </div>
         )
     }

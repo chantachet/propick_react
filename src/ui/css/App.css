@@ -39,6 +39,17 @@
   color: white;
 }
 
+.App-Bar a h2{
+  /* color: #009BFF; */
+ font-weight: 600;
+ text-shadow: 2px 2px 4px #00000080;
+}
+
+.App-Bar a:hover{
+  text-decoration: none;
+  color: rgb(252,119,35);
+}
+
 /* .App-Image {
   width: 100%;
 } */

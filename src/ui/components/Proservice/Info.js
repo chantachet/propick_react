@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import BGAboutUs from './../../images/0131.jpg'
-
+import { BGInfoProservice } from '../../constants/configImagePath'
 
 export default class Info extends Component {
     constructor(props) {
@@ -11,7 +10,7 @@ export default class Info extends Component {
         const title = this.props.detail ? this.props.detail.Title : ""
         return (
             <div id="aboutus" style={{ backgroundColor: '#c10000' }}>
-                <div className="row aboutus-info-bg" style={{ backgroundPosition: 'relative', backgroundImage: "url(" + BGAboutUs + ")" }}>
+                <div className="row aboutus-info-bg" style={{ backgroundImage: "url(" + BGInfoProservice + ")" }}>
                     <div className="col-sm-12 text-center">
                         <div className="text-about-info ">
                             {/* <h1>PROFESSIONAL OF OUTSITE SERVICE AND DELIVERY</h1> */}

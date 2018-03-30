@@ -13,6 +13,7 @@
 .navbar-default .navbar-nav li a{
     color: white;
 }
+
 .navbar-nav {
     width: 100%;
     text-align: center;
@@ -28,14 +29,24 @@
    
 }
 
+.active-link a {
+    background: transparent;
+    color: rgb(163, 163, 163) !important;
+}
+
+.active-link .navbar-default .navbar-nav li a {
+    background: transparent;
+    color: rgb(163, 163, 163) !important;
+} 
+
 .selected-proservice {
     color: #c10000 !important;
-    font-weight: 600;
+    font-weight: 800;
     background: 'transparent' !important;
 }
 
 .selected-propick {
-    color: #009BFF !important;
-    font-weight: 600;
+    color: #40b4ff !important;
+    font-weight: 800;
     background: 'transparent' !important;
 }

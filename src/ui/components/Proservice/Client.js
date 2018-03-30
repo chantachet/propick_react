@@ -1,16 +1,8 @@
 import React, { Component } from 'react'
-import ImageClient from './../../images/client.jpg'
-import bankchina from './../../images/logo/bankchina.png'
-import bangkokbank from './../../images/logo/bangkokbank.png'
-import bangjak from './../../images/logo/bangjak.png'
-import huawei from './../../images/logo/huawei.png'
-import kasikorn from './../../images/logo/kasikorn.png'
-import medical from './../../images/logo/medical.png'
-import msig from './../../images/logo/msig.png'
-import tmb from './../../images/logo/tmb.png'
-import tot from './../../images/logo/tot.png'
-import aig from './../../images/logo/aig.png'
-import abn from './../../images/logo/abn.png'
+import {
+    bankchina, bangkokbank, bangjak, huawei, kasikorn,
+    medical, msig, tmb, tot, aig, abn
+} from '../../constants/configImagePath'
 import { Grid, Row, Col } from 'react-bootstrap'
 
 export default class Client extends Component {

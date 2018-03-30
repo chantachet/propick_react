@@ -1,11 +1,17 @@
 #propick .App-Bar {
+    font-weight: 600;
     padding-top: 20px;
     padding-bottom: 10px;
     background-color: gray;
     /* background-color: #009BFF; */
-  }
+}
 
-@media (min-width: 940px){
+#propick .App-Bar a:hover {
+    color: #c10000;
+    /* background-color: #009BFF; */
+}
+
+@media (min-width: 940px) {
     #propick-info .section-height {
         height: 650px !important;
     }
@@ -13,7 +19,7 @@
         height: 500px !important;
     }
     #howto .section-height {
-        height: 500px !important;
+        height: 600px !important;
     }
     .left-info-panel {
         padding-right: 20px !important;
@@ -22,7 +28,6 @@
         padding-top: 10px;
         height: 600px !important;
     }
-
     .right-info-panel img {
         width: 80% !important;
         height: 110% !important;
@@ -37,9 +42,9 @@
         font-size: 20px;
         justify-content: center;
     }
-
     .propick-logo-download {
         height: 80px !important;
+        margin-bottom: 10px !important;
     }
     .propick-logo-download img {
         /* margin-top: 50px !important; */
@@ -51,18 +56,15 @@
         width: 100%;
         height: 50%;
     }
-
     .howto-head p {
-        padding-top: 30px !important;
         font-size: 6rem !important;
-        text-align: left;
+        text-align: center;
         /* padding-left: 50px; */
-        padding-bottom: 30px;
+        /* padding-bottom: 30px; */
         font-weight: 400;
         color: white !important;
         text-transform: uppercase;
     }
-
     .service-head p {
         padding-top: 30px !important;
         font-size: 6rem !important;
@@ -72,30 +74,26 @@
         text-transform: uppercase;
         color: #009BFF !important;
     }
-
     .howgood p {
-        padding-top: 30px !important;
+        /* padding-top: 30px !important; */
         font-size: 6rem !important;
         text-align: center;
         /* padding-left: 60px; */
         text-transform: uppercase;
     }
-
-    .howgood-row-height-name{
+    .howgood-row-height-name {
         height: 200px;
         padding-top: 30px;
     }
-
     .howgood-row-height-detail {
         height: 200px;
         padding-top: 30px;
         padding-bottom: 50px;
     }
-
-    .head p {
+    .howgood-detail .head p {
         font-size: 5rem;
         color: #009BFF;
-        font-family:'SukhumvitSet-Medium';
+        font-family: 'SukhumvitSet-Text', sans-serif;
         text-transform: uppercase;
         font-weight: 600;
     }
@@ -105,37 +103,67 @@
         width: 40px;
         left: 43%;
         height: 4px;
-        background: #324158;
+        background: rgb(252, 119, 35);
     }
-
     .title p {
         padding-top: 20px;
         font-size: 5rem;
         color: #324158;
-        font-family:'SukhumvitSet-Medium';
+        font-family: 'SukhumvitSet-Text', sans-serif;
         text-transform: uppercase;
+        font-weight: 600;
     }
-
     .service-item {
         height: 300px !important;
-      }
-    .howto-padding{
+        padding-top: 30px;
+    }
+    .howto-padding {
         padding-top: 10px;
     }
-
     #formCalculate img {
         margin-top: 20px;
         margin-right: 20px;
-        height: 50px;
+        height: 70px;
+    }
+    .deliveryCalculate-info {
+        background-position: center no-repeat !important;
+        /* background-size: cover; */
+        width: 100%;
+        height: 400px;
+    }
+    .service-detail h3 {
+        background-color: rgb(252, 119, 35);
+        position: absolute;
+        /* bottom: 0px; */
+        margin-top: 0px;
+        left: 0px;
+        right: 0;
+        line-height: 50px;
+        color: #FFF;
+    }
+    .propick-logo-download img {
+        margin-top: 30px;
+        width: 100%;
+        height: 80%;
+        position: relative;
+    }
+    #delivery-button {
+        padding-top: 20px;
+        padding-left: 100px;
+    }
+
+    .qrcode-propick {
+        width: 50%;
+        height: 50%;
     }
 }
 
-.right-info-panel{
+.right-info-panel {
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.right-info-panel img{
+.right-info-panel img {
     width: 80% !important;
     /* height: 100%; */
 }
@@ -145,18 +173,19 @@
     padding-bottom: 0px;
     padding-top: 30px;
     color: #454545;
-  }
-  .propick-section-header .section-title {
+}
+
+.propick-section-header .section-title {
     font-size: 36px;
     text-transform: uppercase;
     position: relative;
     padding-bottom: 20px;
     margin: 0 0 20px;
-    font-family:'SukhumvitSet-Medium';
-    font-weight:600;
-  }
+    font-family: 'SukhumvitSet-Medium';
+    font-weight: 600;
+}
 
-  .propick-section-header .section-title:before {
+.propick-section-header .section-title:before {
     content: "";
     position: absolute;
     width: 140px;
@@ -165,9 +194,9 @@
     margin-left: -70px;
     height: 2px;
     background: #009BFF;
-  }
+}
 
-  .propick-section-header .section-title:after {
+.propick-section-header .section-title:after {
     content: "";
     position: absolute;
     width: 24px;
@@ -177,21 +206,38 @@
     margin-left: -12px;
     border: 5px solid #fff;
     border-radius: 20px;
-    background:  #009BFF;
-  }
+    background: #009BFF;
+}
 
 .info-bg {
     /* background-color: #009BFF; */
-     /* position: relative; */
-     background-position: no-repeat center center !important;
-     background-size: 100% 100%;
-     width: auto !important;
-     /* opacity: 0.8; */
-     z-index: -1;
+    /* position: relative; */
+    background-position: no-repeat center center !important;
+    background-size: 100% 100%;
+    width: auto !important;
+    /* opacity: 0.8; */
+    z-index: -1;
 }
 
 .howgood-bg {
     background-color: #FFF;
+}
+
+.howgood-detail .head p {
+    font-size: 5rem;
+    color: #009BFF;
+    font-family: 'SukhumvitSet-Text', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.title p {
+    padding-top: 20px;
+    font-size: 4rem;
+    color: #324158;
+    font-family: 'SukhumvitSet-Text', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .howwork-bg {
@@ -212,15 +258,16 @@
 
 .propick-logo-download {
     height: 60px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .propick-logo-download img {
     margin-top: 30px;
-    width: 100%;
-    height: 80%;
+    width: 80%;
+    height: 60%;
     position: relative;
 }
+
 .propick-logo {
     width: 100%;
     height: 50%;
@@ -239,55 +286,70 @@
     font-size: 30px;
     justify-content: center;
 }
+
+
 /* 
 .howgood {
    position: absolute;
 } */
 
 .howgood p {
-    padding-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: xx-large;
     color: #009BFF;
     font-weight: 600;
     font-family: 'SukhumvitSet-Text', sans-serif;
     text-transform: uppercase;
+    border: solid rgb(252, 119, 35);
 }
 
 .howto-head p {
-    padding-top: 30px !important;
-    font-size: xx-large;
-    color: #009BFF;
-    font-weight: 600;
-    font-family: 'SukhumvitSet-Text', sans-serif;
-    text-transform: uppercase;
-}
-
-.service-head p {
-    padding-top: 30px !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px;
     font-size: xx-large;
     color: #fff;
     font-weight: 600;
     font-family: 'SukhumvitSet-Text', sans-serif;
     text-transform: uppercase;
+    border: solid rgb(255, 255, 255);
+}
+
+.howgood-row-height-detail {
+    padding-bottom: 20px;
+}
+
+.service-head p {
+    margin-top: 10px;
+    padding-top: 20px !important;
+    padding-bottom: 20px;
+    font-size: xx-large;
+    color: #009BFF;;
+    font-weight: 600;
+    font-family: 'SukhumvitSet-Text', sans-serif;
+    text-transform: uppercase;
+    border: solid rgb(252, 119, 35);
 }
 
 .service-detail {
     position: relative;
-    display:inline-block;
+    display: inline-block;
     border-radius: 15px 15px 0 0;
     border: 1px solid rgb(255, 255, 255);
 }
+
 .service-detail img {
-    max-width:100%;
-    border-radius: 15px 15px 0 0;
+    max-width: 100%;
+    /* border-radius: 15px 15px 0 0; */
 }
+
 .service-detail h3 {
-    background-color: rgb(252,119,35);
-    position: absolute;
+    background-color: rgb(252, 119, 35);
+    /* position: absolute; */
     /* bottom: 0px; */
     margin-top: 0px;
     left: 0px;
-    right:0;
+    right: 0;
     line-height: 50px;
     color: #FFF;
     /* border-radius: 0 0 25px 25px; */
@@ -295,54 +357,61 @@
     /* border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px; */
 }
+
 .service-item {
     background-position: center no-repeat;
     background-size: cover;
     width: 100%;
     display: block;
     border-radius: 2px;
-      /* box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    /* box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
       transition: box-shadow .25s; */
-      overflow: hidden;
-  }
+    overflow: hidden;
+}
 
-  .service-item .slider-inner {
+.service-item .slider-inner {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     color: #fff;
-  }
+}
 
-  .service-item .slider-inner .btn {
+.service-item .slider-inner .btn {
     position: absolute;
     margin-right: 50px;
     margin-left: 50px;
-    margin-bottom: 20px !important; 
+    margin-bottom: 20px !important;
     bottom: 0;
     left: 0;
     right: 0;
-    background:transparent; 
-    border:2px solid rgb(255, 255, 255); 
-    border-radius:0px;
-    
-  }
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 0px;
+}
 
-  .service-item .slider-inner .btn.btn-primary{ padding:10px 46px; font-size:18px;}
-  .service-item .slider-inner .btn.btn-primary:hover{ background:#00BFFF;}
+.service-item .slider-inner .btn.btn-primary {
+    padding: 10px 46px;
+    font-size: 18px;
+}
 
-  .client img {
+.service-item .slider-inner .btn.btn-primary:hover, .service-item .slider-inner .btn.btn-primary:focus {
+    background: #00BFFF;
+}
+
+.client img {
     max-width: 100%;
     max-height: 100%;
     display: block;
     margin: 0 auto;
-    }
+}
+
 .image-gallery {
-    padding-top: 50px;
-    padding-bottom: 75px;
+    /* padding-top: 0px; */
+    /* padding-bottom: 30px; */
     position: relative;
-    display:inline-block;
+    display: inline-block;
     background-size: 100% 100%
 }
 
@@ -351,21 +420,30 @@
     padding-right: 20px;
 }
 
-/* .image-gallery .carousel-inner .item img {
-    border:2px solid rgb(175, 175, 175); 
-    border-radius:0px;
-} */
+.image-gallery .carousel-inner .item img {
+    width: 100%;
+    height: 100%;
+    /* border:2px solid rgb(175, 175, 175); 
+    border-radius:0px; */
+}
 
 .carousel-control.left {
-    background-image: -webkit-linear-gradient(left,rgba(255, 255, 255, 0.5) 0,rgba(255, 255, 255, 0.5) 100%);
-  }
-  .carousel-control.right {
-    background-image: -webkit-linear-gradient(left,rgba(255, 255, 255, 0.5) 0,rgba(255, 255, 255, 0.5) 100%);
-  }
-  .carousel-control{
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.carousel-control.right {
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.carousel-control {
     color: rgb(255, 255, 255);
     width: unset;
-  }
+}
+
+
+/* .carousel {
+      padding-bottom: 30px;
+  } */
 
 #formCalculate {
     padding-top: 30px;
@@ -381,5 +459,59 @@
     margin-left: 20px;
     margin-right: 20px;
     border: 1px solid rgb(196, 196, 196);
+    margin-bottom: 20px;
     /* background-color: #009BFF; */
+}
+
+#calculate row {
+    padding-left: 5px;
+    padding-right: 5px;
+    /* background-color: #009BFF; */
+}
+
+
+/* #delivery {
+    background: rgb(241, 241, 241);
+} */
+
+#delivery .btn.btn-warning {
+    background-color: rgb(252, 119, 35) !important;
+    border-color: rgb(252, 119, 35) !important;
+}
+
+#delivery .btn.btn-warning:hover {
+    background-color: rgb(255, 151, 32) !important;
+    border-color: rgb(255, 151, 32) !important;
+}
+
+#delivery-button {
+    padding-top: 20px;
+}
+
+#term-propick .App-Bar {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: gray;
+    /* background-color: #009BFF; */
+}
+
+#privacy-propick .App-Bar {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: gray;
+    /* background-color: #009BFF; */
+}
+
+#term-propick .navbar.navbar-default {
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    background: #40b4ff;
+}
+
+#privacy-propick .navbar.navbar-default {
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    background: #40b4ff;
 }

@@ -6,7 +6,7 @@ export default class Footer extends Component {
         return (
             <footer id="footer">
                 <div className="row col-sm-12 text-center">
-                    ©2018 All rights reserved - Proservice Co., Ltd.
+                    ©2018 All rights reserved - Pro Services Co., Ltd.
             </div>
             </footer>
         );
