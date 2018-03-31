@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { Button } from 'react-bootstrap'
+import { Button, Modal } from 'react-bootstrap'
 import './../../css/proservice.css'
 import HomeMenu from '../Home/HomeMenu'
 import Menu from '../Proservice/Menu'
 import { BGCareer } from '../../constants/configImagePath'
+import * as webConstant from '../../constants/variable'
 
 export default class Career extends Component {
     constructor(props) {
@@ -14,7 +15,8 @@ export default class Career extends Component {
             email: '',
             phone: '',
             message: '',
-            formsent: false
+            formsent: false,
+            showModal: false
         };
     }
 
@@ -23,66 +25,37 @@ export default class Career extends Component {
     handleEmailChange = (e) => { this.setState({ email: e.target.value }); }
     handlePhoneChange = (e) => { this.setState({ phone: e.target.value }); }
     handleMessageChange = (e) => { this.setState({ message: e.target.value }); }
-
+    handleHide = () => {
+        this.setState({ showModal: false });
+      }
     handleSubmit = (e) => {
         e.preventDefault()
-
-        // fetch('/career', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Accept': 'application/json',
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify({
-        //         subject: this.state.subject,
-        //         name: this.state.name,
-        //         email: this.state.email,
-        //         phone: this.state.phone,
-        //         message: this.state.message
-        //         // then continue this with the other inputs, such as email body, etc.
-        //     })
-        // })
-        //     .then((response) => response.json())
-        //     .then((responseJson) => {
-        //         if (responseJson.success) {
-        //             this.setState({ formSent: true })
-        //         }
-        //         else this.setState({ formSent: false })
-        //     })
-        //     .catch((error) => {
-        //         console.error(error);
-        //     });
-
-        // const nodemailer = require('nodemailer');
-        // const xoauth2 = require('xoauth2');
-
-        // var transporter = nodemailer.createTransport({
-        //     service: 'gmail',
-        //     auth: {
-        //         xoauth2: xoauth2.createXOAuth2Generator({
-        //             user: 'my.email@gmail.com',
-        //             clientId: '1034367757404-lvbn1vlsce8h00305cvd3oj7q74dnd74.apps.googleusercontent.com',
-        //             clientSecret: 'Mt9vEBgEwgZVYLuxEN6VmlX2',
-        //             refreshToken: 'Bearer ya29.GluGBZjpYFUoVeBO5oY3VAHOOIx_D4Tz0NR2UlQmw3ccP66iZ8pYZf_7Mqp_fRjDNSQPeOhIQxSd85ngevL4CQFhemtSLIvX5O2Su26VtCJVpgvlApnhUPcOEDPw'
-        //         })
+        // fetch("https://wuyep6c0qg.execute-api.us-east-1.amazonaws.com/prod/sendemail", {
+        //     method: "POST",
+        //     body: {
+        //         "mailTo": "i_am_454@hotmail.com",
+        //         "mailFrom": "bussayakaew@gmail.com",
+        //         "subject": "test",
+        //         "text": "test mail 123"
         //     }
-        // })
-
-        // var mailOptions = {
-        //     from: 'My Name <my.email@gmail.com>',
-        //     to: 'tanwut.bigboss@gmail.com',
-        //     subject: 'Nodemailer test',
-        //     text: 'Hello World!!'
-        // }
-
-        // transporter.sendMail(mailOptions, function (err, res) {
-        //     if (err) {
-        //         console.log('Error');
-        //     } else {
-        //         console.log('Email Sent');
-        //     }
-        // })
-
+        fetch(webConstant.sendMailApi, {
+            method: "POST",
+            body: {
+                "mailTo": this.state.email,
+                "mailFrom": webConstant.emailOffice,
+                "subject": this.state.subject,
+                "text": this.state.message
+            }
+        }).then(response => response.json())
+            .then((responseJson) => {
+                if (responseJson == "Completed") {
+                    this.setState({ subject: '', email: '', message: '', formSent: true, showModal: true })
+                }
+                else this.setState({ formSent: false })
+            })
+            .catch((error) => {
+                console.error(error);
+            });
 
     }
 
@@ -112,27 +85,27 @@ export default class Career extends Component {
                                                 onChange={this.handleSubjectChange} value={subject} />
                                         </div>
                                     </div>
-                                    <div className="form-group">
+                                    {/* <div className="form-group">
                                         <div className="col-xs-4 col-sm-4 col-md-2 hidden-xs"></div>
                                         <div className="col-xs-12 col-sm-5 col-md-8">
                                             <input className="form-control" type="text" placeholder="Name"
                                                 onChange={this.handleNameChange} value={name} required="required" />
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <div className="form-group">
                                         <div className="col-xs-4 col-sm-4 col-md-2 hidden-xs"></div>
                                         <div className="col-xs-12 col-sm-5 col-md-8">
                                             <input className="form-control" type="email" placeholder="E-mail"
-                                                onChange={this.handleEmailChange} value={email} />
+                                                onChange={this.handleEmailChange} value={email} required="required" />
                                         </div>
                                     </div>
-                                    <div className="form-group">
+                                    {/* <div className="form-group">
                                         <div className="col-xs-4 col-sm-4 col-md-2 hidden-xs"></div>
                                         <div className="col-xs-12 col-sm-5 col-md-8">
                                             <input className="form-control" type="tel" placeholder="Phone"
                                                 onChange={this.handlePhoneChange} value={phone} required="required" />
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <div className="form-group">
                                         <div className="col-xs-4 col-sm-4 col-md-2 hidden-xs"></div>
                                         <div className="col-xs-12 col-sm-5 col-md-8">
@@ -152,6 +125,20 @@ export default class Career extends Component {
                     </div>
 
                 </div>
+                <Modal
+                    show={this.state.showModal}
+                    onHide={this.handleHide}
+                    container={this}
+                    aria-labelledby="contained-modal-title"
+                >
+                    <Modal.Header closeButton>
+                        {/* <Modal.Title id="contained-modal-title"> ร่วมงานกับเรา </Modal.Title> */}
+                    </Modal.Header>
+                    <Modal.Body>ส่งข้อความเรียบร้อย กรุณารอการติดต่อกลับจากเจ้าหน้าที่</Modal.Body>
+                    <Modal.Footer>
+                        <Button onClick={this.handleHide}>Close</Button>
+                    </Modal.Footer>
+                </Modal>
             </div>
         )
     }

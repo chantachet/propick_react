@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import * as endpoint from './../../constants/endpoint'
 import './../../css/timeline.css'
 import { ScreenLogin, ScreenMarkLocation, ScreenChooseService, ScreenConfirm } from '../../constants/configImagePath'
 import ControlledCarousel from '../Propick/ControlledCarousel'

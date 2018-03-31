@@ -207,3 +207,10 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  .modal-container {
+    position: relative;
+  }
+  .modal-container .modal, .modal-container .modal-backdrop {
+    position: absolute;
+  }

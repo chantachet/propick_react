@@ -50,15 +50,12 @@ export default class AboutUs extends Component {
                 <HomeMenu />
                 <Menu />
                 <div className="row text-center timeline aboutus-bg" style={{ backgroundImage: "url(" + BGAboutUs + ")" }}>
-                    {/* <div className="col-sm-6" style={{ paddingLeft: '0px', paddingRight: '0px' }}>
-                        <div className="item quality-info" style={{ backgroundImage: "url(" + BGAboutUs + ")" }}>
+                    <div className="section-header">
+                        <div className="section-title text-center wow fadeInDown">
+                            <h2>เกี่ยวกับเรา</h2>
                         </div>
-                    </div> */}
-                    {/* <div className="section-header">
-                        <div className="section-title text-center wow fadeInDown"><h2>เกี่ยวกับเรา</h2></div>
-                    </div> */}
+                    </div>
                     <div className="col-sm-12 timeline-padding-body ">
-                        {/* <h2>เกี่ยวกับเรา</h2> */}
                         <ul>
                             <li>
                                 <h3>นโยบายหลัก</h3>
@@ -71,19 +68,6 @@ export default class AboutUs extends Component {
                         </ul>
                     </div>
                 </div>
-                {/* <div className="timeline">
-                    <h2>เกี่ยวกับเรา</h2>
-                    <ul>
-                        <li>
-                            <h3>นโยบายหลัก</h3>
-                            {tagIntroduction}
-                        </li>
-                        <li>
-                            <h3>สิ่งที่คุณจะได้รับ</h3>
-                            {tagBenefit}
-                        </li>
-                    </ul>
-                </div> */}
             </div>
         )
     }

@@ -47,12 +47,12 @@
     "webpack-dev-server": "^2.11.2"
   },
   "scripts": {
-    "start": "npm-run-all --parallel start-dev-api start-dev-ui ",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "start-dev-api": "json-server --watch src/api/data.json --routes src/api/routes.json --port 5001",
-    "start-dev-ui": "react-scripts start"
+    "start-dev-ui": "npm-run-all --parallel start-dev-api start-dev-ui "
   },
   "proxy": "http://localhost:3005"
 }
