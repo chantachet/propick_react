@@ -11,7 +11,7 @@ export default class Client extends Component {
         let tagImage = [], tagImage2 = [];
         images.forEach((value, i) => {
             tagImage.push(
-                <div className="col-xs-6 col-sm-2 col-md-2 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
+                <div key={i} className="col-xs-6 col-sm-2 col-md-2 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
                     <div className="ourclient" >
                         <img src={value} alt="img" />
                     </div>
@@ -19,7 +19,7 @@ export default class Client extends Component {
         });
         images2.forEach((value, i) => {
             tagImage2.push(
-                <div className="col-xs-6 col-sm-2 col-md-2 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
+                <div key={i} className="col-xs-6 col-sm-2 col-md-2 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
                     <div className="ourclient" >
                         <img src={value} alt="img" />
                     </div>

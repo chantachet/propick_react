@@ -38,6 +38,11 @@ export default class Career extends Component {
         //         "subject": "test",
         //         "text": "test mail 123"
         //     }
+        console.log("fullName",this.state.name);
+        console.log("email",this.state.email);
+        console.log("phone",this.state.phone);
+        console.log("position",this.state.message);
+
         fetch(webConstant.sendMailApi, {
             method: "POST",
             body: {
