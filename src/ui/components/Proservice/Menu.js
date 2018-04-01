@@ -18,7 +18,7 @@ export default class Menu extends Component {
                             <LinkContainer to="/proservice/aboutus" activeClassName="active-link">
                                 <NavItem eventKey={2}>เกี่ยวกับเรา</NavItem>
                             </LinkContainer>
-                            <NavItem eventKey={3} href="/proservice/#service">บริการ</NavItem>
+                            <NavItem eventKey={3} href="/proservice/#proservice-service">บริการ</NavItem>
                             <NavItem eventKey={4} href="/proservice/#client">ลูกค้าธุรกิจ</NavItem>
                             <LinkContainer to="/proservice/career" activeClassName="active-link">
                                 <NavItem eventKey={5}>ร่วมงานกับเรา</NavItem>

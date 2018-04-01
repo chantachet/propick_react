@@ -17,10 +17,9 @@ export default class DetailAboutUs extends Component {
                     <div className="col-sm-6">
                         <div className="panel-left">
                             <div className="text-center">
-                                <p><h3>{companyName}</h3></p>
-                                <p className="text-justify"><h3>{paragaph}</h3></p>
-                                <br/>
-                                <p><h3><b>" {title} "</b></h3></p>
+                                <p>{companyName}</p>
+                                <p>{paragaph}</p>
+                                <p><b>" {title} "</b></p>
                             </div>
                         </div>
                     </div>

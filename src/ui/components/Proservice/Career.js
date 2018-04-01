@@ -27,7 +27,7 @@ export default class Career extends Component {
     handleMessageChange = (e) => { this.setState({ message: e.target.value }); }
     handleHide = () => {
         this.setState({ showModal: false });
-      }
+    }
     handleSubmit = (e) => {
         e.preventDefault()
         // fetch("https://wuyep6c0qg.execute-api.us-east-1.amazonaws.com/prod/sendemail", {
@@ -41,15 +41,15 @@ export default class Career extends Component {
         fetch(webConstant.sendMailApi, {
             method: "POST",
             body: {
-                "mailTo": this.state.email,
-                "mailFrom": webConstant.emailOffice,
-                "subject": this.state.subject,
-                "text": this.state.message
+                "fullName": this.state.name,
+                "email": this.state.email,
+                "phone": this.state.phone,
+                "position": this.state.message
             }
         }).then(response => response.json())
             .then((responseJson) => {
                 if (responseJson == "Completed") {
-                    this.setState({ subject: '', email: '', message: '', formSent: true, showModal: true })
+                    this.setState({ subject: '', name: "", email: '', phone: "", message: '', formSent: true, showModal: true })
                 }
                 else this.setState({ formSent: false })
             })
@@ -78,38 +78,40 @@ export default class Career extends Component {
                             </div>
                             <div>
                                 <form className="form-horizontal" onSubmit={this.handleSubmit}>
-                                    <div className="form-group">
-                                        <div className="col-xs-4 col-sm-4 col-md-2 hidden-xs"></div>
-                                        <div className="col-xs-12 col-sm-5 col-md-8">
-                                            <input className="form-control" type="text" placeholder="Subject"
-                                                onChange={this.handleSubjectChange} value={subject} />
-                                        </div>
-                                    </div>
                                     {/* <div className="form-group">
                                         <div className="col-xs-4 col-sm-4 col-md-2 hidden-xs"></div>
                                         <div className="col-xs-12 col-sm-5 col-md-8">
-                                            <input className="form-control" type="text" placeholder="Name"
-                                                onChange={this.handleNameChange} value={name} required="required" />
+                                            <input className="form-control" type="text" placeholder="หัวเรื่อง"
+                                                onChange={this.handleSubjectChange} value={subject} />
                                         </div>
                                     </div> */}
                                     <div className="form-group">
                                         <div className="col-xs-4 col-sm-4 col-md-2 hidden-xs"></div>
                                         <div className="col-xs-12 col-sm-5 col-md-8">
-                                            <input className="form-control" type="email" placeholder="E-mail"
+                                            <input className="form-control" type="text" placeholder="ชื่อ - นามสกุล"
+                                                onChange={this.handleNameChange} value={name} required="required" />
+                                        </div>
+                                    </div>
+                                    <div className="form-group">
+                                        <div className="col-xs-4 col-sm-4 col-md-2 hidden-xs"></div>
+                                        <div className="col-xs-12 col-sm-5 col-md-8">
+                                            <input className="form-control" type="email" placeholder="อี-เมล์"
                                                 onChange={this.handleEmailChange} value={email} required="required" />
                                         </div>
                                     </div>
-                                    {/* <div className="form-group">
-                                        <div className="col-xs-4 col-sm-4 col-md-2 hidden-xs"></div>
-                                        <div className="col-xs-12 col-sm-5 col-md-8">
-                                            <input className="form-control" type="tel" placeholder="Phone"
-                                                onChange={this.handlePhoneChange} value={phone} required="required" />
-                                        </div>
-                                    </div> */}
                                     <div className="form-group">
                                         <div className="col-xs-4 col-sm-4 col-md-2 hidden-xs"></div>
                                         <div className="col-xs-12 col-sm-5 col-md-8">
-                                            <textarea className="form-control" placeholder="Message" row={4}
+                                            <input className="form-control" type="tel" placeholder="เบอร์โทรศัพท์ (xxx-xxx-xxxx)"
+                                                onChange={this.handlePhoneChange} value={phone} 
+                                                required="required" 
+                                                pattern="^\d{3}-\d{3}-\d{4}$"/>
+                                        </div>
+                                    </div>
+                                    <div className="form-group">
+                                        <div className="col-xs-4 col-sm-4 col-md-2 hidden-xs"></div>
+                                        <div className="col-xs-12 col-sm-5 col-md-8">
+                                            <textarea className="form-control" placeholder="ตำแหน่งที่ต้องการสมัคร" row={4}
                                                 onChange={this.handleMessageChange} value={message} />
                                         </div>
                                     </div>

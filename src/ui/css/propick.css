@@ -151,10 +151,19 @@
         padding-top: 20px;
         padding-left: 100px;
     }
-
     .qrcode-propick {
         width: 50%;
         height: 50%;
+    }
+    #contactus img {
+        width: 50% !important;
+    }
+
+    .info-bg {
+        background-position: no-repeat center center !important;
+        background-size: 100% 100%;
+        width: auto !important;
+        height: 100vh !important;
     }
 }
 
@@ -212,11 +221,12 @@
 .info-bg {
     /* background-color: #009BFF; */
     /* position: relative; */
-    background-position: no-repeat center center !important;
+    background-position: no-repeat center center;
     background-size: 100% 100%;
-    width: auto !important;
+    width: auto ;
     /* opacity: 0.8; */
     z-index: -1;
+    height: unset;
 }
 
 .howgood-bg {
@@ -254,6 +264,10 @@
 
 .contactus-bg {
     background-color: #324158;
+}
+
+#contactus img {
+    width: 30% ;
 }
 
 .propick-logo-download {
@@ -324,7 +338,8 @@
     padding-top: 20px !important;
     padding-bottom: 20px;
     font-size: xx-large;
-    color: #009BFF;;
+    color: #009BFF;
+    ;
     font-weight: 600;
     font-family: 'SukhumvitSet-Text', sans-serif;
     text-transform: uppercase;
@@ -514,4 +529,37 @@
     border-radius: 0;
     margin-bottom: 0;
     background: #40b4ff;
+}
+
+#service .card-block {
+    font-size: 1em;
+    position: relative;
+    margin: 0;
+    padding: 5px;
+    border: none;
+    border-top: 1px solid rgba(34, 36, 38, .1);
+    box-shadow: none;
+    background: rgb(252, 119, 35);
+}
+
+#service .card-img-top {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#service .card-title {
+    padding: 10px;
+    font-weight: 400;
+    font-size: 1.4em;
+}
+
+#service .card-item {
+    width: auto;
+    height: 200px;
+}
+
+#service .card-body p {
+    font-size: 30px;
+    color: #FFF;
 }

@@ -71,3 +71,16 @@
 .selected {
   color: '#00BFFF' !important;
 }
+
+#home .text-on-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#home .text-on-image p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

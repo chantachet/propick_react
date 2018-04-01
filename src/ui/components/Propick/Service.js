@@ -10,12 +10,10 @@ export default class Service extends Component {
             this.props.detail.forEach((value, i) => {
                 tagDetail.push(
                     <div key={i} className="col-xs-12 col-sm-4 col-md-4">
-                        <div className="wow zoomIn" data-wow-duration="400ms" data-wow-delay="0ms">
-                            <div className="service-item">
-                                <div className="service-detail">
-                                    <img src={imageService[i]} alt="image" />
-                                    <h3>{value}</h3>
-                                </div>
+                        <div className="card">
+                            <div className="card-body">
+                                <img className="card-img-top" src={imageService[i]} alt="image" />
+                                <p className="card-block">{value}</p>
                             </div>
                         </div>
                     </div>

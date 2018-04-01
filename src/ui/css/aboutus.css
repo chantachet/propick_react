@@ -20,21 +20,12 @@ h1, h2, h3 {
   left: 0;
 }
 
-.timeline h2 {
-  background: #ffffff;
+#aboutus .timeline h2 {
   max-width: 6em;
   margin: 0 auto 1em;
-  padding: 0.5em;
   text-align: center;
   position: relative;
   clear: both;
-}
-
-.timeline ul {
-  list-style: none;
-  padding: 0 0 0 1em;
-  z-index: 1;
-  padding-top: 80px;
 }
 
 .timeline li {

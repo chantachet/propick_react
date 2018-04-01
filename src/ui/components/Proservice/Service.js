@@ -10,20 +10,18 @@ export default class Service extends Component {
             this.props.detail.forEach((value, i) => {
                 tagDetail.push(
                     <div className="col-xs-12 col-sm-4 col-md-4" key={i}>
-                    <div className="wow zoomIn" data-wow-duration="400ms" data-wow-delay="0ms">
-                        <div className="pro-service-item">
-                            <div className="pro-service-detail">
-                                <img src={imageService[i]} alt="image" />
-                                <h3>{value}</h3>
+                    <div className="card">
+                            <div className="card-body">
+                                <img className="card-img-top" src={imageService[i]} alt="image" />
+                                <p className="card-block">{value}</p>
                             </div>
                         </div>
-                    </div>
                 </div>
                 )
             })
         }
         return (
-            <div id="service" className="padding-bottom-section pro-service-bg">
+            <div id="proservice-service" className="padding-bottom-section pro-service-bg">
                 <div className="row">
                     <div className="section-header">
                         <div className="section-title text-center wow fadeInDown"><h2>{this.props.name}</h2></div>

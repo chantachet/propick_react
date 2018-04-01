@@ -1489,11 +1489,6 @@ ul.nostyle i {
   padding-right: 30px;
 }
 
-#detailinfo p {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
 .about-bg {
   background-position: center center no-repeat;
   /* height: 500px; */
@@ -1557,7 +1552,7 @@ ul.nostyle i {
     background-position: unset !important;
     background-size: cover !important;
     width: auto !important;
-    height: 650px !important;
+    height: 100vh !important;
   }
 }
 
@@ -1598,8 +1593,9 @@ ul.nostyle i {
 
 .aboutus-info-bg {
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  height: 250px;
 }
 
 .client {

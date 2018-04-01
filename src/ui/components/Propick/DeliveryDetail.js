@@ -11,26 +11,6 @@ export default class DeliveryDetail extends Component {
 
     }
 
-    // componentWillReceiveProps(nextProps) {
-    //     if (nextProps.latFrom > 0 && nextProps.lngFrom > 0 && nextProps.latTo > 0 && nextProps.lngTo > 0) {
-    //         if ((nextProps.latFrom !== this.props.latFrom || nextProps.latTo !== nextProps.latTo)
-    //             || (nextProps.lngFrom !== this.props.lngFrom || nextProps.lngTo !== nextProps.lngTo)) {
-    //             this.getDistance(nextProps.latFrom, nextProps.lngFrom, nextProps.latTo, nextProps.lngTo)
-    //             console.log("this.getDistance:componentWillReceiveProps")
-    //         }
-    //     }
-        
-    // }
-
-    // shouldComponentUpdate(nextProps, nextState) {
-    //     // if ((nextProps.latFrom !== this.props.latFrom || nextProps.latTo !== nextProps.latTo)
-    //     // || (nextProps.lngFrom !== this.props.lngFrom || nextProps.lngTo !== nextProps.lngTo)) {
-    //         return true
-    //     // } else {
-    //     //     return false
-    //     // }
-    // }
-
     getDistance = async (latFrom, lngFrom, latTo, lngTo) => {
         let service = new window.google.maps.DistanceMatrixService();
         await service.getDistanceMatrix(
@@ -45,14 +25,10 @@ export default class DeliveryDetail extends Component {
                 if (status === "OK") {
                     var dest = response.destinationAddresses[0]
                     var distance = response.rows[0].elements[0].distance.value / 1000
-                    console.log("service.getDistanceMatrix: OK", response)
                     this.calculate(distance)
-                } else {
-                    console.log("Error: " + status);
-                }
+                } 
             }
         );
-        console.log("service.getDistanceMatrix")
     }
 
     calculate = (newDistance) => {
@@ -66,7 +42,6 @@ export default class DeliveryDetail extends Component {
 
     render() {
         this.getDistance(this.props.latFrom, this.props.lngFrom, this.props.latTo, this.props.lngTo)
-        console.log("DeleveryDetail:render=", this.props.lngTo)
         return (
             <div id="calculate">
                 <div className="row">
